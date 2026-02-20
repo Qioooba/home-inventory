@@ -1,0 +1,6 @@
+com/homeinventory/entity/Item.class
+com/homeinventory/service/ItemService.class
+com/homeinventory/repository/ItemRepository.class
+com/homeinventory/controller/ItemController.class
+com/homeinventory/config/WebConfig.class
+com/homeinventory/HomeInventoryApplication.class

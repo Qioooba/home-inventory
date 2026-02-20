@@ -1,0 +1,39 @@
+# 应用配置
+spring:
+  application:
+    name: home-inventory
+
+  # H2 数据库配置（开发用）
+  datasource:
+    url: jdbc:h2:file:./data/home_inventory
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  # H2 Console（开发时可以通过 http://localhost:8080/h2-console 访问数据库）
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  # 文件上传配置
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 50MB
+
+  # 静态资源
+  web:
+    resources:
+      static-locations: classpath:/static/,file:uploads/
+
+# 服务器配置
+server:
+  port: 8080
